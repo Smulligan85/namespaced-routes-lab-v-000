@@ -1,10 +1,13 @@
-<%= form_for @preference  do |f| %>
-  <%= f.label :allow_create_artists %>
-  <%= f.check_box :allow_create_artists %>
-
-  <%= f.label :allow_create_songs%>
-  <%= f.check_box :allow_create_songs %>
-
+<%= form_for @preference, url: admin_access_path(@preference) do |f| %>
+  <div>
+    <%= f.label :allow_create_artists %><br>
+    True: <%= f.radio_button :allow_create_artists, true %>
+    False: <%= f.radio_button :allow_create_artists, false %>
+  </div>
+  <div>
+    <%= f.label :allow_create_songs %><br>
+    True: <%= f.radio_button :allow_create_songs, true %>
+    False: <%= f.radio_button :allow_create_songs, false %>
+  </div>
   <%= f.submit %>
-
 <% end %>
