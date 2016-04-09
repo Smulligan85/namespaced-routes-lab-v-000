@@ -1,0 +1,10 @@
+<%= form_for @preferenec do |f| %>
+  <%= f.label :artist_sort_order %>
+  <%= f.check_box :artist_sort_order %>
+
+  <%= f.label :song_sort_order %>
+  <%= f.check_box :song_sort_order %>
+
+  <%= f.submit %>
+
+<% end %>
